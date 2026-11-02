@@ -1,36 +1,296 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Paddock Exotics | South Florida Exotic & Collector Cars</title>
-<meta name="description" content="Paddock Exotics connects buyers and sellers of exotic, classic and hard-to-find cars in South Florida.">
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:-apple-system,Helvetica,Arial,sans-serif;background:#0d0d0d;color:#eee;line-height:1.6}
-header{padding:80px 20px 60px;text-align:center;background:linear-gradient(160deg,#1a1a1a,#3a0a0a)}
-h1{font-size:clamp(2rem,7vw,3.5rem);margin:0;letter-spacing:2px}h1 span{color:#d40000}
-.tag{color:#bbb;font-size:1.1rem;margin-top:10px}
-main{max-width:900px;margin:auto;padding:40px 20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.card{background:#181818;border:1px solid #2a2a2a;border-radius:10px;padding:22px}
-.card h3{margin-top:0;color:#d40000}
-.cta{text-align:center;margin:50px 0}
-.btn{display:inline-block;background:#d40000;color:#fff;padding:14px 28px;border-radius:6px;text-decoration:none;font-weight:600}
-footer{text-align:center;color:#777;font-size:.85rem;padding:30px 20px;border-top:1px solid #222}
-</style>
-</head>
-<body>
-<header><h1>PADDOCK <span>EXOTICS</span></h1><p class="tag">Exotic, classic and hard-to-find car sourcing in South Florida</p></header>
-<main>
-<p>We help collectors and enthusiasts buy, sell and trade exceptional cars across Miami-Dade, Broward and Palm Beach.</p>
-<div class="grid">
-<div class="card"><h3>Buy</h3><p>Looking for a specific car? Tell us the spec and we'll find it.</p></div>
-<div class="card"><h3>Sell</h3><p>Didn't get your number at auction? We'll connect you with serious buyers.</p></div>
-<div class="card"><h3>Trade</h3><p>Ready for your next car? We'll help you trade up.</p></div>
-</div>
-<p style="margin-top:30px">Ferrari, Porsche, Lamborghini, McLaren, Lotus, rare Mercedes and any exotic, classic or hard-to-find car, from modern hypercars to air-cooled icons.</p>
-<div class="cta"><a class="btn" href="mailto:luisl3108@gmail.com?subject=Paddock%20Exotics%20inquiry">Contact us</a><p>luisl3108@gmail.com</p></div>
-</main>
-<footer>&copy; 2026 Paddock Exotics &middot; South Florida</footer>
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Paddock Exotics | South Florida Exotic & Collector Cars</title><meta name="description" content="Paddock Exotics connects buyers and sellers of exotic, classic and hard-to-find cars in South Florida."><style>
+@import url("https://fonts.googleapis.com/css2?family=Inter+Fallback:wght@400;500;600;700&display=swap");
+:root {
+  --background: oklch(1 0 0);
+  --foreground: lab(2.51107 0.242703 -0.886115);
+  --card: oklab(0.999994 0.0000455678 0.0000200868 / 0.3);
+  --card-foreground: lab(2.51107 0.242703 -0.886115);
+  --popover: var(--color-white);
+  --popover-foreground: var(--color-zinc-950);
+  --primary: var(--vng-primary);
+  --primary-foreground: var(--vng-primary-foreground);
+  --secondary: var(--vng-secondary);
+  --secondary-foreground: var(--vng-secondary-foreground);
+  --muted: var(--color-zinc-100);
+  --muted-foreground: var(--color-zinc-500);
+  --accent: lab(2.51107 0.242703 -0.886115);
+  --accent-foreground: var(--color-zinc-950);
+  --destructive: var(--vng-danger);
+  --destructive-foreground: var(--color-white);
+  --border: var(--vng-border);
+  --input: var(--color-zinc-200);
+  --ring: var(--vng-primary);
+  --radius: 8px;
+  --shadow-2xs: 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.03);
+  --shadow-xs: 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.05);
+  --shadow-sm: 0 0.0625rem 0.1875rem 0 rgba(0,0,0,0.06), 0 0.0625rem 0.125rem -0.0625rem rgba(0,0,0,0.04);
+  --shadow: 0 0.0625rem 0.1875rem 0 rgba(0,0,0,0.08), 0 0.0625rem 0.125rem -0.0625rem rgba(0,0,0,0.06);
+  --shadow-md: 0 0.25rem 0.375rem -0.0625rem oklch(0 0 0 / 0.08), 0 0.125rem 0.25rem -0.125rem oklch(0 0 0 / 0.06), 0 0 0 0.0625rem oklch(0 0 0 / 0.04);
+  --shadow-lg: 0 0.5rem 1rem -0.125rem rgba(0,0,0,0.08), 0 0 0 0.0625rem rgba(0,0,0,0.04);
+  --shadow-xl: 0 1rem 1.5rem -0.25rem rgba(0,0,0,0.1), 0 0 0 0.0625rem rgba(0,0,0,0.04);
+  --chart-1: var(--color-blue-500);
+  --chart-2: var(--color-indigo-500);
+  --chart-3: var(--color-purple-500);
+  --chart-4: var(--color-indigo-400);
+  --chart-5: var(--color-red-500);
+  --transition-duration-fast: 180ms;
+  --transition-duration-base: 240ms;
+  --transition-duration-slow: 300ms;
+  --ease-out: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-in: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  --default-transition-duration: var(--transition-duration-fast);
+  --default-transition-timing-function: var(--ease-out);
+  --ai-label: var(--muted);
+  --ai-label-foreground: var(--foreground);
+  --font-sans: Inter, "Inter Fallback";
+  --button: lab(96.1634 0.0993311 -0.364041);
+  --button-text: lab(2.51107 0.242703 -0.886115);
+  --font-heading: Inter, "Inter Fallback";
+  --layout-density: compact;
+  --radius-button: 6px;
+  --radius-card: 8px;
+  --shadow-card: none;
+  --vng-background: var(--color-white);
+  --vng-border: var(--color-zinc-200);
+  --vng-danger: var(--color-red-600);
+  --vng-foreground: var(--color-zinc-950);
+  --vng-primary: var(--color-zinc-950);
+  --vng-primary-foreground: var(--color-white);
+  --vng-primary-hover: var(--color-zinc-800);
+  --vng-radius-lg: 8px;
+  --vng-radius-md: 6px;
+  --vng-radius-sm: 4px;
+  --vng-secondary: var(--color-zinc-100);
+  --vng-secondary-foreground: var(--color-zinc-950);
+  --vng-space-lg: 2rem;
+  --vng-space-md: 1rem;
+  --vng-space-sm: .75rem;
+  --vng-space-xs: .5rem;
+  --vng-success: var(--color-green-600);
+  --vng-transition-speed: .15s;
+  --vng-transition-speed-slow: calc(var(--vng-transition-speed) * 2);
+  --vng-warning: var(--color-yellow-500);
+  --font-serif: ui-serif, Georgia, 'Times New Roman', serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --layout-density-source: design-system;
+  --layout-sidebar: calc(var(--spacing, 0.25rem) * 46);
+  --layout-inset: calc(var(--spacing, 0.25rem) * 4);
+  --layout-section-gap: calc(var(--spacing, 0.25rem) * 6);
+  --layout-column-gap: calc(var(--spacing, 0.25rem) * 3);
+  --layout-card-padding: calc(var(--spacing, 0.25rem) * 4);
+}
+.dark {
+  --background: lab(2.51107 0.242703 -0.886115);
+  --foreground: oklch(1 0 0);
+  --card: oklab(0.999994 0.0000455678 0.0000200868 / 0.012);
+  --card-foreground: oklch(1 0 0);
+  --popover: var(--color-zinc-950);
+  --popover-foreground: var(--color-white);
+  --primary: var(--vng-primary);
+  --primary-foreground: var(--vng-primary-foreground);
+  --secondary: var(--vng-secondary);
+  --secondary-foreground: var(--vng-secondary-foreground);
+  --muted: var(--color-zinc-800);
+  --muted-foreground: var(--color-zinc-400);
+  --accent: oklch(1 0 0);
+  --accent-foreground: var(--color-white);
+  --destructive: var(--vng-danger);
+  --destructive-foreground: var(--color-white);
+  --border: var(--vng-border);
+  --input: var(--color-zinc-800);
+  --font-sans: Inter, "Inter Fallback";
+  --button: lab(2.75381 0 0);
+  --button-text: lab(96.1634 0.0993311 -0.364041);
+  --font-heading: Inter, "Inter Fallback";
+  --radius-button: 6px;
+  --radius-card: 8px;
+  --shadow-card: none;
+  --vng-background: var(--color-zinc-950);
+  --vng-border: var(--color-zinc-800);
+  --vng-foreground: var(--color-white);
+  --vng-primary: var(--color-white);
+  --vng-primary-foreground: var(--color-zinc-950);
+  --vng-primary-hover: var(--color-zinc-200);
+  --vng-secondary: var(--color-zinc-800);
+  --vng-secondary-foreground: var(--color-white);
+}
+:root {
+  --font-sans: Inter, "Inter Fallback";
+  --font-sans: Inter, "Inter Fallback";
+  --font-serif: ui-serif, Georgia, 'Times New Roman', serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-sans: Inter, "Inter Fallback";
+}
+:root {
+  --radius-button: 6px;
+  --radius-card: 8px;
+  --radius-sm: calc(var(--radius) - 0.25rem);
+  --radius-md: calc(var(--radius) - 0.125rem);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 0.25rem);
+}
+:root {
+  --shadow-2xs: 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.03);
+  --shadow-xs:  0 0.0625rem 0.125rem 0 rgba(0,0,0,0.05);
+  --shadow-sm:  0 0.0625rem 0.1875rem 0 rgba(0,0,0,0.06), 0 0.0625rem 0.125rem -0.0625rem rgba(0,0,0,0.04);
+  --shadow:     0 0.0625rem 0.1875rem 0 rgba(0,0,0,0.08), 0 0.0625rem 0.125rem -0.0625rem rgba(0,0,0,0.06);
+  --shadow-md:  0 0.25rem 0.375rem -0.0625rem oklch(0 0 0 / 0.08), 0 0.125rem 0.25rem -0.125rem oklch(0 0 0 / 0.06), 0 0 0 0.0625rem oklch(0 0 0 / 0.04);
+  --shadow-lg:  0 0.5rem 1rem -0.125rem rgba(0,0,0,0.08), 0 0 0 0.0625rem rgba(0,0,0,0.04);
+  --shadow-xl:  0 1rem 1.5rem -0.25rem rgba(0,0,0,0.1), 0 0 0 0.0625rem rgba(0,0,0,0.04);
+  --shadow-card: none;
+  --shadow-card: none;
+}
+.bd-btn, .bd-view, .ds-btn { border-radius: var(--radius-xl, calc(var(--radius, 0.5rem) + 4px)); }
+.bd-input, .ds-input, .ds-textarea, .ds-select { border-radius: var(--radius-xl, calc(var(--radius, 0.5rem) + 4px)); }
+.bd-card, .ds-card { border-radius: var(--radius-xl, calc(var(--radius, 0.5rem) + 4px)); }
+*,*::before,*::after{box-sizing:border-box}
+:where(.ds){font-family:var(--font-sans,ui-sans-serif,system-ui,sans-serif);color:var(--foreground,oklch(0.2 0 0));background:var(--background,oklch(1 0 0));line-height:1.5}
+.ds :where(h1,h2,h3,h4,h5,h6,p,strong,label,legend,li,dt,dd,small){color:inherit}
+.ds h1,.ds h2,.ds h3,.ds h4{font-family:inherit;font-weight:600;margin:0 0 .5em;color:var(--foreground,oklch(0.2 0 0))}
+.ds .ds-display{font-family:inherit;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;line-height:1.05;letter-spacing:-.03em;margin:0;color:var(--foreground,oklch(0.2 0 0))}
+.ds .ds-section-title{font-family:inherit;font-size:1.25rem;font-weight:600;line-height:1.2;letter-spacing:-.01em;margin:0;color:var(--foreground,oklch(0.2 0 0))}
+.ds .ds-supporting{font-size:.875rem;font-weight:400;line-height:1.5;color:var(--muted-foreground,oklch(0.55 0 0));margin:0}
+/* A link styled as a button keeps the button's own label colour, so the link
+   colour skips .ds-btn. Resetting it with color:inherit outranked every button
+   variant and put the page's dark text on the dark primary fill. */
+.ds a:not(.ds-btn){color:var(--primary,oklch(0.45 0.15 264));text-decoration:none}
+.ds a.ds-btn:hover{text-decoration:none}
+.ds p{margin:0 0 1em}
+.ds-muted{color:var(--muted-foreground,oklch(0.55 0 0))}
+
+/* Button */
+.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font:inherit;font-size:.875rem;font-weight:500;line-height:1;padding:.6rem 1rem;border-radius:var(--radius-md,calc(var(--radius,0.5rem) - 2px));border:1px solid transparent;cursor:pointer;touch-action:manipulation;transition:opacity var(--transition-duration-fast,150ms) var(--ease-out,cubic-bezier(0.165, 0.84, 0.44, 1)),background var(--transition-duration-fast,150ms) var(--ease-out,cubic-bezier(0.165, 0.84, 0.44, 1));text-decoration:none}
+.ds-btn:focus-visible{outline:2px solid var(--ring,var(--primary,oklch(0.45 0.15 264)));outline-offset:2px}
+.ds-btn:disabled{background:var(--muted,oklch(0.94 0 0));color:var(--foreground,oklch(0.2 0 0));border-color:var(--border,oklch(0.85 0 0));opacity:1;cursor:not-allowed}
+.ds-btn-primary{background:var(--primary,oklch(0.45 0.15 264));color:var(--primary-foreground,oklch(1 0 0));box-shadow:var(--shadow-sm,var(--shadow-xs,none))}
+.ds-btn-secondary{background:var(--secondary,oklch(0.96 0 0));color:var(--secondary-foreground,oklch(0.25 0 0));box-shadow:var(--shadow-xs,none)}
+.ds-btn-outline{background:transparent;color:var(--foreground,oklch(0.2 0 0));border-color:var(--border,oklch(0.85 0 0))}
+.ds-btn-ghost{background:transparent;color:var(--foreground,oklch(0.2 0 0))}
+.ds .ds-btn[aria-pressed="true"],.ds .ds-btn[aria-pressed="true"]:hover{background:var(--primary,oklch(0.45 0.15 264));color:var(--primary-foreground,oklch(1 0 0));border-color:var(--primary,oklch(0.45 0.15 264));opacity:1}
+.ds-btn-sm{padding:.4rem .7rem;font-size:.8125rem}
+.ds-btn-lg{padding:.75rem 1.4rem;font-size:1rem}
+
+/* Form fields */
+.ds-label{display:block;font-size:.8125rem;font-weight:500;margin-bottom:.4rem;color:var(--foreground,oklch(0.2 0 0))}
+.ds-input,.ds-textarea,.ds-select{width:100%;font:inherit;font-size:.875rem;padding:.55rem .75rem;border-radius:var(--radius-lg,var(--radius,0.5rem));border:1px solid var(--border,oklch(0.85 0 0));background:var(--input,var(--background,oklch(1 0 0)));color:var(--foreground,oklch(0.2 0 0));box-shadow:var(--shadow-inset,var(--shadow-2xs,none));transition:border-color var(--transition-duration-fast,150ms) var(--ease-out,cubic-bezier(0.165, 0.84, 0.44, 1)),box-shadow var(--transition-duration-fast,150ms) var(--ease-out,cubic-bezier(0.165, 0.84, 0.44, 1))}
+.ds-input::placeholder,.ds-textarea::placeholder{color:var(--muted-foreground,oklch(0.6 0 0))}
+.ds-input:focus,.ds-textarea:focus,.ds-select:focus{outline:none;border-color:var(--ring,var(--primary,oklch(0.45 0.15 264)));box-shadow:var(--shadow-inset,0 0 0 0 transparent),0 0 0 2px color-mix(in oklab,var(--ring,var(--primary,oklch(0.45 0.15 264))) 35%,transparent)}
+.ds-textarea{min-height:5rem;resize:vertical}
+
+/* Card */
+.ds-card{display:flex;flex-direction:column;background:var(--card,var(--background,oklch(1 0 0)));color:var(--card-foreground,var(--foreground,oklch(0.2 0 0)));border:1px solid var(--border,oklch(0.9 0 0));border-radius:var(--radius-xl,calc(var(--radius,0.5rem) + 4px));box-shadow:var(--shadow-glass,var(--shadow-md,var(--shadow-sm,none)));overflow:hidden}
+.ds-card-header{padding:1.1rem 1.25rem .5rem}
+.ds-card-body{padding:.5rem 1.25rem 1.1rem}
+.ds-card-footer{margin-top:auto;padding:.9rem 1.25rem;border-top:1px solid var(--border,oklch(0.92 0 0));display:flex;gap:.5rem;align-items:center}
+.ds-card-title{font-size:1.05rem;margin:0 0 .25rem}
+.ds-card-desc{font-size:.875rem;color:var(--muted-foreground,oklch(0.55 0 0));margin:0}
+
+/* Badge */
+.ds-badge{display:inline-flex;align-items:center;font-size:.6875rem;font-weight:600;padding:.15rem .55rem;border-radius:999px;background:var(--secondary,oklch(0.9 0 0));color:var(--secondary-foreground,oklch(0.25 0 0));line-height:1.4}
+.ds-badge-primary{background:var(--primary,oklch(0.45 0.15 264));color:var(--primary-foreground,oklch(1 0 0))}
+.ds-badge-outline{background:transparent;border:1px solid var(--border,oklch(0.85 0 0));color:var(--foreground,oklch(0.2 0 0))}
+.ds-badge-safe{background:var(--pop-green,oklch(0.92 0.06 150));color:var(--pop-green-foreground,oklch(0.42 0.11 152))}
+.ds-badge-warn{background:var(--pop-orange,oklch(0.93 0.05 40));color:var(--pop-orange-foreground,oklch(0.52 0.18 35))}
+.ds-badge-danger{background:var(--destructive,oklch(0.58 0.22 32));color:var(--destructive-foreground,oklch(0.99 0 0))}
+.ds-badge-unknown{background:var(--pop-yellow,oklch(0.9 0.085 92));color:var(--pop-yellow-foreground,oklch(0.42 0.09 75))}
+.ds-badge-verified{background:var(--pop-blue,oklch(0.92 0.045 245));color:var(--pop-blue-foreground,oklch(0.48 0.14 252))}
+
+/* Alert */
+.ds-alert{border:1px solid var(--border,oklch(0.9 0 0));border-radius:var(--radius-lg,var(--radius,0.5rem));padding:.9rem 1rem;background:var(--card,var(--background,oklch(1 0 0)));color:var(--card-foreground,var(--foreground,oklch(0.2 0 0)));font-size:.875rem}
+.ds-alert-title{font-weight:600;margin:0 0 .2rem}
+
+/* Avatar + misc */
+.ds-avatar{width:2.25rem;height:2.25rem;border-radius:999px;background:var(--muted,oklch(0.95 0 0));color:var(--muted-foreground,oklch(0.45 0 0));display:inline-flex;align-items:center;justify-content:center;font-size:.8125rem;font-weight:600}
+.ds-divider{height:1px;background:var(--border,oklch(0.9 0 0));border:0;margin:1rem 0}
+.ds-row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.ds-field{margin-bottom:1rem}
+.ds-control-row{display:grid;grid-template-columns:minmax(8rem,14rem) auto;gap:.75rem;align-items:end;justify-content:start}
+.ds-control-row>.ds-field{margin:0}
+.ds-control-row>.ds-btn,.ds-control-row .ds-input,.ds-control-row .ds-select{min-height:2.75rem}
+.ds-container{max-width:42rem;margin:0 auto;padding:1.5rem}
+
+/* Switch */
+.ds-switch{display:inline-flex;align-items:center;gap:.6rem;font-size:.875rem;cursor:pointer}
+.ds-switch-track{width:2.25rem;height:1.25rem;border-radius:999px;background:var(--muted,oklch(0.9 0 0));position:relative;transition:background var(--transition-duration-fast,150ms) var(--ease-out,cubic-bezier(0.165, 0.84, 0.44, 1));flex:none}
+.ds-switch-track.on{background:var(--primary,oklch(0.45 0.15 264))}
+.ds-switch-thumb{position:absolute;top:2px;left:2px;width:calc(1.25rem - 4px);height:calc(1.25rem - 4px);border-radius:999px;background:var(--background,oklch(1 0 0));box-shadow:var(--shadow-sm,0 1px 2px oklch(0 0 0 / 0.2));transition:transform var(--transition-duration-fast,150ms) var(--ease-out,cubic-bezier(0.165, 0.84, 0.44, 1))}
+.ds-switch-track.on .ds-switch-thumb{transform:translateX(1rem)}
+
+/* Tabs */
+.ds-tabs{display:inline-flex;gap:.15rem;padding:.25rem;border-radius:var(--radius-lg,var(--radius,0.5rem));background:var(--muted,oklch(0.96 0 0))}
+.ds-tab{font:inherit;font-size:.8125rem;font-weight:500;padding:.4rem .8rem;border:0;border-radius:var(--radius-md,calc(var(--radius,0.5rem) - 2px));background:transparent;color:var(--muted-foreground,oklch(0.5 0 0));cursor:pointer;touch-action:manipulation}
+.ds-tab.active{background:var(--background,oklch(1 0 0));color:var(--foreground,oklch(0.2 0 0));box-shadow:var(--shadow-sm,var(--shadow-xs,none))}
+
+/* Progress */
+.ds-progress{height:.5rem;border-radius:999px;background:var(--muted,oklch(0.92 0 0));overflow:hidden}
+.ds-progress-bar{height:100%;border-radius:999px;background:var(--primary,oklch(0.45 0.15 264))}
+
+/* Table */
+.ds-table{width:100%;border-collapse:collapse;font-size:.8125rem}
+.ds-table th,.ds-table td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border,oklch(0.92 0 0))}
+.ds-table th{font-weight:600;color:var(--muted-foreground,oklch(0.5 0 0));font-size:.6875rem;text-transform:uppercase;letter-spacing:.04em}
+
+/* Chip / keyboard key */
+.ds-chip{display:inline-flex;align-items:center;gap:.35rem;font:inherit;font-size:.8125rem;padding:.3rem .7rem;border-radius:999px;border:1px solid var(--border,oklch(0.88 0 0));background:var(--background,oklch(1 0 0));color:var(--foreground,oklch(0.2 0 0));cursor:pointer;touch-action:manipulation;transition:background-color var(--transition-duration-fast,150ms) var(--ease-out,cubic-bezier(0.165, 0.84, 0.44, 1)),border-color var(--transition-duration-fast,150ms) var(--ease-out,cubic-bezier(0.165, 0.84, 0.44, 1)),color var(--transition-duration-fast,150ms) var(--ease-out,cubic-bezier(0.165, 0.84, 0.44, 1))}
+.ds-chip:focus-visible{outline:2px solid var(--ring,var(--primary,oklch(0.45 0.15 264)));outline-offset:2px}
+.ds .ds-chip[aria-pressed="true"],.ds .ds-chip[aria-pressed="true"]:hover{background:var(--primary,oklch(0.45 0.15 264));color:var(--primary-foreground,oklch(1 0 0));border-color:var(--primary,oklch(0.45 0.15 264))}
+.ds-kbd{font-family:var(--font-mono,ui-monospace,monospace);font-size:.75rem;padding:.1rem .4rem;border-radius:var(--radius-sm,4px);border:1px solid var(--border,oklch(0.85 0 0));background:var(--muted,oklch(0.97 0 0));color:var(--foreground,oklch(0.2 0 0))}
+
+/* Touch canvases need finger-sized hit areas and inputs that do not trigger mobile zoom. */
+@media (pointer:coarse){
+.ds-btn,.ds-tab,.ds-chip{min-height:44px}
+.ds-input,.ds-select{min-height:44px;font-size:1rem}
+}
+@media (max-width:40rem){
+.ds-control-row{grid-template-columns:1fr}
+.ds-control-row>.ds-btn{width:100%}
+}
+
+/* Hover is a neutral fine-pointer cue, never a second selection color. */
+@media (hover:hover) and (pointer:fine){
+.ds a:hover{text-decoration:underline}
+.ds-btn:hover:not(:disabled):not([aria-pressed="true"]){opacity:.9}
+.ds-btn-ghost:hover:not(:disabled):not([aria-pressed="true"]){background:var(--accent,oklch(0.96 0 0));opacity:1}
+.ds-input:hover:not(:disabled),.ds-textarea:hover:not(:disabled),.ds-select:hover:not(:disabled){border-color:color-mix(in oklab,var(--foreground,oklch(0.2 0 0)) 20%,transparent)}
+.ds .ds-chip:hover:not([aria-pressed="true"]){background:color-mix(in oklab,var(--foreground,oklch(0.2 0 0)) 4%,var(--background,oklch(1 0 0)));color:var(--foreground,oklch(0.2 0 0));border-color:color-mix(in oklab,var(--foreground,oklch(0.2 0 0)) 28%,var(--border,oklch(0.88 0 0)))}
+}
+
+/* Selection adopts the accent, matching the real systems */
+.ds ::selection{background:var(--primary,oklch(0.45 0.15 264));color:var(--primary-foreground,oklch(1 0 0))}
+.bd-btn, .bd-view, .ds-btn { border-radius: var(--radius-xl, calc(var(--radius, 0.5rem) + 4px)); }
+.bd-input, .ds-input, .ds-textarea, .ds-select { border-radius: var(--radius-xl, calc(var(--radius, 0.5rem) + 4px)); }
+.bd-card, .ds-card { border-radius: var(--radius-xl, calc(var(--radius, 0.5rem) + 4px)); }
+.ds-badge, .ds-badge-primary { border-radius: 9999px; }
+.ds-input, .ds-textarea, .ds-select { border-radius: var(--radius-xl, calc(var(--radius, 0.5rem) + 4px)); }
+*,::before,::after,::backdrop{--tw-ring-color:currentcolor;--tw-ring-shadow:0 0 0 transparent;--tw-ring-offset-shadow:0 0 0 transparent;--tw-ring-offset-width:0px;--tw-ring-offset-color:oklch(1 0 0);--tw-ring-inset:;--tw-shadow:0 0 0 transparent;--tw-inset-shadow:0 0 0 transparent;--tw-inset-ring-shadow:0 0 0 transparent;--tw-scale-x:1;--tw-scale-y:1;--tw-scale-z:1;--tw-translate-x:0;--tw-translate-y:0;--tw-translate-z:0;--tw-rotate-x:;--tw-rotate-y:;--tw-rotate-z:;--tw-skew-x:;--tw-skew-y:;--tw-gradient-from:transparent;--tw-gradient-to:transparent;--tw-gradient-stops:;--tw-blur:;--tw-brightness:;--tw-contrast:;--tw-saturate:;--tw-content:''}
+.ds-badge { display:inline-flex; align-items:center; justify-content:center; border-radius:calc(infinity * 1px); font-weight:500; letter-spacing:0.025em; transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms; transition-duration:var(--transition-duration-base); border-width:1px; border-color:transparent; color:var(--secondary-foreground); border-color:var(--border); background-color:oklch(0.897 0 180) }
+.ds-badge:hover { background-color:var(--accent) }
+.ds-btn { position:relative; display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; white-space:nowrap; font-size:0.875rem;line-height:1.25rem; font-weight:600; outline:2px solid transparent;outline-offset:2px; transition-property:all;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms; transition-duration:var(--transition-duration-base); transition-timing-function:cubic-bezier(0,0,0.2,1) }
+.ds-btn:focus-visible { outline:2px solid transparent;outline-offset:2px; --tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); --tw-ring-color:var(--ring); --tw-ring-offset-width:2px;--tw-ring-offset-shadow:var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color); --tw-ring-offset-color:var(--background) }
+.ds-btn:disabled { pointer-events:none; opacity:0.4 }
+.ds-btn:active { --tw-scale-x:0.98;--tw-scale-y:0.98;--tw-scale-z:0.98;scale:var(--tw-scale-x) var(--tw-scale-y) }
+.ds .ds-btn-primary { border-radius:var(--radius-xl, calc(var(--radius) + 4px)); background-color:var(--primary); color:var(--primary-foreground) }
+.ds .ds-btn-primary:hover { background-color:color-mix(in oklab, var(--primary) 80%, transparent) }
+.ds .ds-btn-primary:active { background-color:color-mix(in oklab, var(--primary) 70%, transparent) }
+.ds .ds-btn-secondary { border-radius:var(--radius-xl, calc(var(--radius) + 4px)); background-color:var(--secondary); color:var(--secondary-foreground); border-width:1px; border-color:var(--border) }
+.ds .ds-btn-secondary:hover { background-color:var(--accent); border-color:color-mix(in oklab, var(--border) 60%, transparent) }
+.ds .ds-btn-outline { border-radius:var(--radius-xl, calc(var(--radius) + 4px)); border-width:1px; border-color:var(--border); background-color:transparent; color:var(--foreground) }
+.ds .ds-btn-outline:hover { background-color:var(--accent); border-color:color-mix(in oklab, var(--border) 80%, transparent) }
+.ds .ds-btn-ghost { border-radius:var(--radius-xl, calc(var(--radius) + 4px)); color:var(--muted-foreground) }
+.ds .ds-btn-ghost:hover { background-color:var(--accent); color:var(--foreground) }
+.ds-input, .ds-textarea, .ds-select { display:flex; height:2.375rem; width:100%; border-radius:var(--radius-xl, calc(var(--radius) + 4px)); border-width:1px; border-color:var(--border); background-color:var(--input); padding-left:1rem;padding-right:1rem; padding-top:0.5rem;padding-bottom:0.5rem; font-size:0.875rem;line-height:1.25rem; color:var(--foreground); transition-property:border-color;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms; transition-duration:var(--transition-duration-base); transition-timing-function:cubic-bezier(0,0,0.2,1) }
+.ds-input::placeholder, .ds-textarea::placeholder, .ds-select::placeholder { color:var(--muted-foreground) }
+.ds-input:hover, .ds-textarea:hover, .ds-select:hover { border-color:color-mix(in oklab, var(--border) 60%, transparent) }
+.ds-input:focus-visible, .ds-textarea:focus-visible, .ds-select:focus-visible { outline:2px solid transparent;outline-offset:2px; border-color:var(--ring); --tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); --tw-ring-color:var(--ring) }
+.ds-input::file-selector-button, .ds-textarea::file-selector-button, .ds-select::file-selector-button { border-width:0; background-color:transparent; font-size:0.875rem;line-height:1.25rem; font-weight:500 }
+.ds-input:disabled, .ds-textarea:disabled, .ds-select:disabled { cursor:not-allowed; opacity:0.4 }
+.ds-card { border-radius:var(--radius-xl, calc(var(--radius) + 4px)); border-width:1px; border-color:var(--border); background-color:var(--card); color:var(--card-foreground) }
+:root{color-scheme:light dark}@media(prefers-color-scheme:dark){:root{--background:#090909;--foreground:#f6f6f4;--card:#101010;--card-foreground:#f6f6f4;--primary:#f6f6f4;--primary-foreground:#090909;--secondary:#1c1c1b;--secondary-foreground:#f6f6f4;--muted:#181818;--muted-foreground:#a0a09c;--border:#30302e;--input:#151514;--ring:#f6f6f4}}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--background);color:var(--foreground);font-family:var(--font-sans),Arial,sans-serif}.site{max-width:1280px;margin:auto;padding:0 24px}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)}.brand{font-family:var(--font-mono);font-size:.82rem;font-weight:700;letter-spacing:.08em;color:inherit;text-decoration:none}.brand span{color:var(--muted-foreground);font-weight:500}.links{display:flex;align-items:center;gap:24px}.links a{font-size:.84rem;color:var(--muted-foreground);text-decoration:none}.links a[aria-current="page"]{color:var(--foreground);font-weight:600}.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end;padding:92px 0 68px;border-bottom:1px solid var(--border)}.hero-copy{max-width:680px}.hero h1{font-family:var(--font-mono);font-size:clamp(3.2rem,8vw,7.8rem);line-height:.86;letter-spacing:-.09em;margin:0;max-width:8ch}.hero p{font-size:1.06rem;line-height:1.65;color:var(--muted-foreground);max-width:46ch;margin:28px 0}.action{display:flex;align-items:center;gap:14px}.action .ds-btn,.close .ds-btn{min-height:48px;text-decoration:none}.note{font-size:.78rem;color:var(--muted-foreground)}.route{min-height:330px;border:1px solid var(--border);background:var(--card);position:relative;padding:22px;overflow:hidden;display:flex;align-items:flex-end}.route svg{position:absolute;inset:16px;width:calc(100% - 32px);height:calc(100% - 32px)}.route p{position:relative;margin:0;font-family:var(--font-mono);font-size:.72rem;color:var(--muted-foreground)}.intro{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:86px 0;border-bottom:1px solid var(--border)}h2{font-size:clamp(1.8rem,4vw,3.1rem);letter-spacing:-.055em;line-height:1;margin:0;max-width:13ch}.intro p,.service p,.head p,.close p{color:var(--muted-foreground);line-height:1.75;margin:0}.services{padding:86px 0}.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}.head p{max-width:40ch;font-size:.94rem}.list{border-top:1px solid var(--border)}.service{display:grid;grid-template-columns:74px .6fr 1.6fr auto;gap:22px;align-items:center;padding:25px 0;border-bottom:1px solid var(--border)}.num{font-family:var(--font-mono);font-size:.75rem;color:var(--muted-foreground)}h3{font-size:1.3rem;letter-spacing:-.035em;margin:0}.service p{font-size:.93rem;line-height:1.55}.close{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:end;border-top:1px solid var(--border);padding:50px 0 74px}.close p{margin-top:13px}.foot{display:flex;justify-content:space-between;gap:20px;padding:24px 0;color:var(--muted-foreground);font-size:.78rem;border-top:1px solid var(--border)}@media(max-width:760px){.site{padding:0 18px}.links{gap:16px}.links a:not(:last-child){display:none}.hero,.intro,.close{grid-template-columns:1fr}.hero{padding:56px 0 42px;gap:32px}.route{min-height:230px}.intro{gap:22px;padding:58px 0}.services{padding:58px 0}.head{display:block}.head p{margin-top:18px}.service{grid-template-columns:40px 1fr;gap:12px}.service p{grid-column:2}.service .ds-badge{display:none}.close{padding:42px 0 56px}.foot{display:block;line-height:1.8}}@media(hover:hover) and (pointer:fine){.links a:hover{color:var(--foreground);text-decoration:none}.brand:hover{text-decoration:none}}
+@media(max-width:760px){.nav{gap:10px}.links{display:none}}</style></head><body><div class="ds" id="top"><div class="site">
+<header class="nav"><a class="brand" href="#top" aria-label="Paddock Exotics home">PADDOCK <span>/</span> EXOTICS</a><nav class="links" aria-label="Primary navigation"><a href="#approach" aria-current="page">Approach</a><a href="#services">Services</a><a class="ds-btn ds-btn-primary" href="mailto:luisl3108@gmail.com?subject=Paddock%20Exotics%20inquiry">Start a conversation</a></nav></header>
+<main><section class="hero" aria-labelledby="hero-title"><div class="hero-copy"><h1 id="hero-title">The right car is out there.</h1><p>Paddock Exotics helps collectors and enthusiasts buy, sell and trade exceptional cars across Miami-Dade, Broward and Palm Beach.</p><div class="action"><a class="ds-btn ds-btn-primary" href="mailto:luisl3108@gmail.com?subject=Paddock%20Exotics%20inquiry">Tell us the spec</a><span class="note">South Florida sourcing</span></div></div><div class="route" aria-label="Abstract route mark representing a sourced vehicle journey"><svg viewBox="0 0 520 360" fill="none" aria-hidden="true"><path d="M83 275C42 206 61 109 148 88c70-17 143 9 178 68 29 48 80 43 111 21 33-23 55-10 48 27-7 36-63 41-100 74-51 45-11 95-80 121-48 18-153 4-222-25Z" stroke="currentColor" stroke-width="2"/><path d="M111 268c48-1 64-32 89-55 29-27 62-30 87-7 32 30 67 18 101-4" stroke="currentColor" stroke-width="1" stroke-dasharray="5 8"/><circle cx="111" cy="268" r="5" fill="currentColor"/><circle cx="388" cy="202" r="5" fill="currentColor"/></svg><p>From the first brief to the right handoff.</p></div></section>
+<section class="intro" id="approach" aria-labelledby="approach-title"><h2 id="approach-title">Cars with a story worth knowing.</h2><p>Ferrari, Porsche, Lamborghini, McLaren, Lotus, rare Mercedes and other hard-to-find cars—from modern hypercars to air-cooled icons. The work begins with the details that decide whether a car is truly the one.</p></section>
+<section class="services" id="services" aria-labelledby="services-title"><div class="head"><h2 id="services-title">Three ways in.</h2></div><div class="list"><article class="service"><span class="num">01</span><h3>Buy</h3><p>Looking for a specific car? Tell us the spec and we’ll find it.</p><span class="ds-badge">Sourcing</span></article><article class="service"><span class="num">02</span><h3>Sell</h3><p>Didn’t get your number at auction? We’ll connect you with serious buyers.</p><span class="ds-badge">Placement</span></article><article class="service"><span class="num">03</span><h3>Trade</h3><p>Ready for your next car? We’ll help you trade up.</p><span class="ds-badge">Transition</span></article></div></section>
+<section class="close" aria-labelledby="close-title"><div><h2 id="close-title">Start with the car.</h2><p>Tell us what you are looking for, selling, or considering next.</p></div><a class="ds-btn ds-btn-primary" href="mailto:luisl3108@gmail.com?subject=Paddock%20Exotics%20inquiry">luisl3108@gmail.com</a></section></main><footer class="foot"><span>© 2026 Paddock Exotics</span><span>South Florida</span></footer></div></div></body></html>
